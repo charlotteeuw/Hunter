@@ -50,7 +50,6 @@ char *int_tostr(int counter)
     int i = 0;
     int start = 0;
     int end = 0;
-    char temp;
 
     if (counter == 0) {
         str[i] = '0';

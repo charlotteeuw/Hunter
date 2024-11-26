@@ -69,7 +69,7 @@ void game_menu(global_t *global)
             move_sprite(global);
             draw_sprite(global);
         }
-        global->mouse = sfMouse_getPosition(global->window->window);
+        global->mouse = sfMouse_getPositionRenderWindow(global->window->window);
         bound2 = sfSprite_getGlobalBounds(global->button->sprite);
         if_click(global, bound2, event, &window_game);
         if (window_game == 1)

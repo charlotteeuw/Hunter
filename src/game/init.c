@@ -29,17 +29,17 @@ void destroy(global_t *all)
 {
     sfFont_destroy(all->kill_counter->font);
     sfText_destroy(all->kill_counter->text);
-    sfClock_destroy(all->clock1);
-    sfClock_destroy(all->clock2);
-    sfClock_destroy(all->clock3);
-    sfClock_destroy(all->clock4);
+    sfClock_destroy(all->clock1->clock);
+    sfClock_destroy(all->clock2->clock);
+    sfClock_destroy(all->clock3->clock);
+    sfClock_destroy(all->clock4->clock);
     sfSprite_destroy(all->cursor->sprite);
     sfSprite_destroy(all->bird->sprite);
     sfSprite_destroy(all->button->sprite);
     sfSprite_destroy(all->background->sprite);
     sfSprite_destroy(all->gameover->sprite);
     sfSprite_destroy(all->menu->sprite);
-    sfWindow_destroy(all->window->window);
+    sfRenderWindow_destroy(all->window->window);
     sfTexture_destroy(all->cursor->texture);
     sfTexture_destroy(all->bird->texture);
     sfTexture_destroy(all->button->texture);

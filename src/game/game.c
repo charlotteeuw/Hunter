@@ -23,7 +23,7 @@ void game_window(global_t *global, sfEvent *event)
     move_bird(global);
     draw_bird(global);
     global->bird->position = sfSprite_getPosition(global->bird->sprite);
-    global->mouse = sfMouse_getPosition(global->window->window);
+    global->mouse = sfMouse_getPositionRenderWindow(global->window->window);
     global->bird->origin.y = rand() % 970;
     if (global->bird->position.x >= 1920) {
         global->failed_kill++;

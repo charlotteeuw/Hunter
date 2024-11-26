@@ -27,7 +27,7 @@ void set_bird(global_t *all)
 void set_menu(global_t *all)
 {
     all->menu->texture =
-    sfTexture_createFromFile("./content/spritesheet.png", &all->bg);
+    sfTexture_createFromFile("./content/spritesheet.png", &all->bg->rect);
     all->menu->sprite = sfSprite_create();
     all->menu->scale = (sfVector2f){1, 1};
     sfSprite_setTexture(all->menu->sprite, all->menu->texture, sfTrue);

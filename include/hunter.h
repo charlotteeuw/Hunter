@@ -17,6 +17,7 @@
     #include <SFML/System/Clock.h>
     #include <stdio.h>
     #include <SFML/Audio.h>
+    #include <unistd.h>
 
 typedef struct object_s {
     sfTexture *texture;
@@ -94,6 +95,8 @@ void set_rect(global_t *all);
 void set_rect_bg(global_t *all);
 void set_clock1(global_t *all);
 void set_clock2(global_t *all);
+void set_clock3(global_t *all);
+void set_clock4(global_t *all);
 void set_window(global_t *all);
 void move_sprite(global_t *all);
 void draw_sprite(global_t *all);
@@ -107,5 +110,12 @@ int my_putstr(char const *str);
 void kill_bird(global_t *global, sfFloatRect bound,
     sfEvent *event);
 void free_mem(global_t *all);
+void destroy(global_t *all);
+char *int_tostr(int counter);
+void move_bird(global_t *global);
+void draw_bird(global_t *global);
+void kill_bird(global_t *global, sfFloatRect bound, sfEvent *event);
+void gameover(global_t *global);
+void set_gameover(global_t *all);
 
 #endif

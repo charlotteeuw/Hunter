@@ -26,7 +26,7 @@ void set_cursor(global_t *all)
     all->cursor->texture =
     sfTexture_createFromFile("./content/cross.png", NULL);
     all->cursor->sprite = sfSprite_create();
-    all->cursor->temp = sfMouse_getPosition(all->window->window);
+    all->cursor->temp = sfMouse_getPositionRenderWindow(all->window->window);
     all->cursor->position.x = all->cursor->temp.x;
     all->cursor->position.y = all->cursor->temp.y;
     all->cursor->scale = (sfVector2f){0.3, 0.3};
@@ -37,7 +37,6 @@ void set_cursor(global_t *all)
 
 void set_rect(global_t *all)
 {
-    all->birds->rect;
     all->birds->rect.top = 0;
     all->birds->rect.left = 0;
     all->birds->rect.width = 110;
@@ -46,7 +45,6 @@ void set_rect(global_t *all)
 
 void set_rect_bg(global_t *all)
 {
-    all->bg->rect;
     all->bg->rect.top = 0;
     all->bg->rect.left = 0;
     all->bg->rect.width = 1920;
@@ -58,5 +56,5 @@ void set_window(global_t *all)
     all->window->mode = (sfVideoMode){1920, 1080, 32};
     all->window->window = sfRenderWindow_create(all->window->mode,
     "My Hunter", sfResize | sfClose, NULL);
-    sfWindow_setFramerateLimit(all->window->window, 30);
+    sfRenderWindow_setFramerateLimit(all->window->window, 30);
 }
